@@ -1,0 +1,41 @@
+﻿@model List<SGTP.Web.Models.TaskModel>
+
+<h2>Lista de Tareas</h2>
+<a href="/Tasks/Create" class="btn btn-primary">Agregar Nueva Tarea</a>
+
+<table class="table" id="TasksTable">
+    
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Fecha de vencimiento</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>@task.DueDate.ToString("dd/MM/yyyy")</td>
+                <td>@(task.IsCompleted ? "Completada" : "Pendiente")</td>
+                <td>
+                    @if (!task.IsCompleted)
+                    {
+                        
+                        <form method="post" asp-action="Complete" asp-route-id="@task.Id" style="display:inline;">
+                            <button type="submit" class="btn btn-success">Completar</button>
+                        </form>
+                    }
+                    
+                    <form method="post" asp-action="Delete" asp-route-id="@task.Id" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
