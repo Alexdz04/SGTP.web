@@ -4,12 +4,12 @@ Manual de Usuario - Sistema de Gestión de Tareas Personales (SGTP)
 
 Introduccion:
 
-El Sistema de Gestión de Tareas Personales (SGTP) es una aplicación web que hice para que puedas organizar y gestionar tus tareas diarias de una manera eficiente desde la web
+El Sistema de Gestión de Tareas Personales (SGTP) es una aplicación web que hice para que se pueda organizar y gestionar las tareas diarias de una manera mas eficiente
 
 
 Acceso al Sistema:
 
-Navegador preferido: MS Microsoft Edge
+Navegador preferido: MS Microsoft Edge (es el que mas recomiendo en mi opinion)
 al ejecutar la pagina web, te mandara a https://localhost:7024/
 La página principal mostrará la lista de tus tareas ya creadas. Si no tienes ninguna creada, crea algunas!
 
